@@ -9,7 +9,23 @@ It's easy to get started. Simply enter the API Key and secret you obtained from 
 
 ### 👀 Lookup a number
 ```ruby
-TODO: Add Code
+require 'message_media_lookups'
+
+# Configuration parameters and credentials
+basic_auth_user_name = 'YOUR_API_KEY' # The username to use with basic authentication
+basic_auth_password = 'YOUR_SECRET_KEY' # The password to use with basic authentication
+
+client = MessageMediaLookups::MessageMediaLookupsClient.new(
+  basic_auth_user_name: basic_auth_user_name,
+  basic_auth_password: basic_auth_password
+)
+
+lookups_controller = client.lookups
+
+phone_number = 'YOUR_MOBILE_NUMBER'
+options = 'carrier,type'
+
+result = lookups_controller.get_lookup_a_phone_number(phone_number, options)
 ```
 
 ## 📕 Documentation
