@@ -3,7 +3,7 @@ The MessageMedia Lookups API provides a number of endpoints for validating the p
 
 ## ⭐️ Installing via RubyGems
 * Download [messagemedia_lookups_sdk-1.0.0.gem](https://github.com/messagemedia/lookups-ruby-sdk/releases/download/1.0.0/message_media_lookups-1.0.0.gem)
-run `gem install messagemedia_lookups_sdk-1.0.0.gem`
+* run `gem install messagemedia_lookups_sdk-1.0.0.gem`
 
 
 ## 🎬 Get Started
