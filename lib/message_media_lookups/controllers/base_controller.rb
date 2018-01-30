@@ -11,7 +11,7 @@ module MessageMediaLookups
       @http_call_back = http_call_back
 
       @global_headers = {
-        'user-agent' => 'messagemedia-lookups'
+        'user-agent' => 'messagemedia-lookups-ruby-sdk-1.0.0'
       }
       @logger = Logging.logger[self]
       @logger.info("Instantiated controller class.")
