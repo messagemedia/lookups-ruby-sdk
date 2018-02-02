@@ -1,4 +1,6 @@
 # MessageMedia Lookups Ruby SDK
+[![Build Status](https://travis-ci.org/messagemedia/lookups-ruby-sdk.svg?branch=master)](https://travis-ci.org/messagemedia/lookups-ruby-sdk)
+
 The MessageMedia Lookups API provides a number of endpoints for validating the phone numbers you’re sending to by checking their validity, type and carrier records.
 
 ## ⭐️ Installing via RubyGems
