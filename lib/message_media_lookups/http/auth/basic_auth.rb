@@ -13,7 +13,7 @@ module MessageMediaLookups
       username = Configuration.basic_auth_user_name
       password = Configuration.basic_auth_password
       if(username.length != 20 || password.length != 30)
-        puts("~~~~ It appears as though your REST API Keys are invalid. Please check and make sure they are correct. (Invalid Length) ~~~~~")
+        puts("~~~~~ It appears as though your REST API Keys are invalid. Please check and make sure they are correct. (Invalid Length) ~~~~~")
       end
       value = Base64.strict_encode64("#{username}:#{password}")
       header_value = "Basic #{value}"
