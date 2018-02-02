@@ -53,7 +53,7 @@ class LookupsControllerTests < ControllerTestBase
 
     # Test whether the captured response is as we expected
     assert_not_nil(result)
-    assert_equal('{"countryCode":"AU","phoneNumber":"+61491570156","type":"MOBILE","carrier":{"name":"AU Landline Carrier"}}', @response_catcher.response.raw_body)
+    assert_equal('{"carrier":{"name":"AU Landline Carrier"},"country_code":"AU","phone_number":"+61491570156"}', @response_catcher.response.raw_body)
   end
 
 end
