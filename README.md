@@ -16,12 +16,14 @@ It's easy to get started. Simply enter the API Key and secret you obtained from 
 require 'message_media_lookups'
 
 # Configuration parameters and credentials
-basic_auth_user_name = 'YOUR_API_KEY' # The username to use with basic authentication
-basic_auth_password = 'YOUR_SECRET_KEY' # The password to use with basic authentication
+auth_user_name = 'YOUR_API_KEY' # The username to use with basic/HMAC authentication
+auth_password = 'YOUR_SECRET_KEY' # The password to use with basic/HMAC authentication
+use_hmac = false # Change this to true if you are using HMAC keys
 
 client = MessageMediaLookups::MessageMediaLookupsClient.new(
-  basic_auth_user_name: basic_auth_user_name,
-  basic_auth_password: basic_auth_password
+  auth_user_name: auth_user_name,
+  auth_password: auth_password
+  use_hmac: use_hmac
 )
 
 lookups_controller = client.lookups
