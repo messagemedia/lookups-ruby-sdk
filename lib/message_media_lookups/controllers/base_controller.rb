@@ -25,6 +25,14 @@ module MessageMediaLookups
       end
     end
 
+    def apply_authentication(request, url, body=nil)
+      if Configuration.hmac_auth_user_name == nil or Configuration.hmac_auth_password == nil
+        BasicAuth.apply(request)
+      else
+        HmacAuth.apply(request, url, body)
+      end
+    end
+
     def execute_request(request, binary: false, name: nil)
       @logger.info("Calling the on_before_request method of http_call_back for #{name}.") if @http_call_back
       @http_call_back.on_before_request(request) if @http_call_back
