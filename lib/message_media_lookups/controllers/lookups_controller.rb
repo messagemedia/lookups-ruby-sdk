@@ -56,6 +56,13 @@ module MessageMediaLookups
                                   options = nil)
       begin
         @logger.info("get_lookup_a_phone_number called.")
+
+        request_url = '/v1/lookups/phone/{phone_number}'
+        request_url = APIHelper.append_url_with_template_parameters(
+            request_url,
+            'phone_number' => phone_number
+        )
+
         # Prepare query url.
         @logger.info("Preparing query URL for get_lookup_a_phone_number.")
         _query_builder = Configuration.base_uri.dup
@@ -85,7 +92,10 @@ module MessageMediaLookups
           _query_url,
           headers: _headers
         )
-        BasicAuth.apply(_request)
+
+        apply_authentication(_request, request_url)
+        # BasicAuth.apply(_request)
+
         _context = execute_request(_request, name: 'get_lookup_a_phone_number')
   
         # Validate response against endpoint and global error codes.
