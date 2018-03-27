@@ -12,7 +12,7 @@ It's easy to get started. Simply enter the API Key and secret you obtained from 
 
 ### 👀 Lookup a number
 ```ruby
-require 'message_media_lookups'
+require 'messagemedia_lookups'
 
 # Configuration parameters and credentials
 auth_user_name = 'YOUR_API_KEY' # The username to use with basic/HMAC authentication
