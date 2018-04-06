@@ -1,4 +1,3 @@
-# This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io ).
 
 require 'tempfile'
 require 'open-uri'
@@ -40,13 +39,13 @@ class TestHelper
                       check_count: false)
     if expected_body.instance_of? Hash
       return false unless received_body.instance_of? Hash
-      for key in expected_body.keys           
+      for key in expected_body.keys
         return false unless received_body.keys.include? key
         if check_values or expected_body[key].instance_of? Hash
-          return false unless TestHelper.match_body(expected_body[key], 
-                                                    received_body[key], 
-                                                    check_values: check_values, 
-                                                    check_order: check_order, 
+          return false unless TestHelper.match_body(expected_body[key],
+                                                    received_body[key],
+                                                    check_values: check_values,
+                                                    check_order: check_order,
                                                     check_count: check_count)
         end
       end
@@ -58,10 +57,10 @@ class TestHelper
         previous_matches = Array.new
         expected_body.each.with_index do |expected_element, i|
           matches = (received_body.map.with_index do |received_element, j|
-                      j if TestHelper.match_body(expected_element, 
-                                                 received_element, 
-                                                 check_values: check_values, 
-                                                 check_order: check_order, 
+                      j if TestHelper.match_body(expected_element,
+                                                 received_element,
+                                                 check_values: check_values,
+                                                 check_order: check_order,
                                                  check_count: check_count)
                     end).compact
           return false if matches.length == 0
@@ -75,13 +74,13 @@ class TestHelper
       return false
     end
     return true
-  end  
-  
-  # Class method which takes a URL, downloads the file (if not already downloaded 
+  end
+
+  # Class method which takes a URL, downloads the file (if not already downloaded
   # for this test session) and returns the path of the file.
   # @param [String] The URL of the required file.
   def self.get_file(url)
-    unless @cache.keys.include? url  
+    unless @cache.keys.include? url
       @cache[url] = Tempfile.new('APIMatic')
       @cache[url].binmode
       @cache[url].write(open(url, {ssl_ca_cert: Certifi.where}).read)

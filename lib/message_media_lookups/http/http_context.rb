@@ -1,5 +1,3 @@
-# This file was automatically generated for MessageMedia by APIMATIC v2.0
-# ( https://apimatic.io ).
 
 module MessageMediaLookups
   # Represents an Http call in context.

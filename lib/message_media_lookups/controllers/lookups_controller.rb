@@ -1,5 +1,3 @@
-# This file was automatically generated for MessageMedia by APIMATIC v2.0
-# ( https://apimatic.io ).
 
 module MessageMediaLookups
   # LookupsController
@@ -79,13 +77,13 @@ module MessageMediaLookups
           array_serialization: Configuration.array_serialization
         )
         _query_url = APIHelper.clean_url _query_builder
-  
+
         # Prepare headers.
         @logger.info("Preparing headers for get_lookup_a_phone_number.")
         _headers = {
           'accept' => 'application/json'
         }
-  
+
         # Prepare and execute HttpRequest.
         @logger.info('Preparing and executing HttpRequest for get_lookup_a_phone_number.')
         _request = @http_client.get(
@@ -97,7 +95,7 @@ module MessageMediaLookups
         # BasicAuth.apply(_request)
 
         _context = execute_request(_request, name: 'get_lookup_a_phone_number')
-  
+
         # Validate response against endpoint and global error codes.
         @logger.info("Validating response for get_lookup_a_phone_number.")
         if _context.response.status_code == 404
@@ -107,7 +105,7 @@ module MessageMediaLookups
           )
         end
         validate_response(_context)
-  
+
         # Return appropriate response type.
         @logger.info("Returning response for get_lookup_a_phone_number.")
         decoded = APIHelper.json_deserialize(_context.response.raw_body)

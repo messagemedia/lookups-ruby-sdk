@@ -1,4 +1,3 @@
-# This file was automatically generated for MessageMedia by APIMATIC v2.0 ( https://apimatic.io ).
 
 class HttpResponseCatcher < MessageMediaLookups::HttpCallBack
   attr_accessor :response
@@ -11,6 +10,3 @@ class HttpResponseCatcher < MessageMediaLookups::HttpCallBack
     @response = context.response
   end
 end
-
-
-
