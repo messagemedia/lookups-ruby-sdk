@@ -81,7 +81,8 @@ module MessageMediaLookups
         # Prepare headers.
         @logger.info("Preparing headers for get_lookup_a_phone_number.")
         _headers = {
-          'accept' => 'application/json'
+          'accept' => 'application/json',
+          'user-agent' => 'messagemedia-lookups-ruby-sdk-1.1.0'
         }
 
         # Prepare and execute HttpRequest.
