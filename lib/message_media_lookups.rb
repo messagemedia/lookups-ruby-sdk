@@ -20,8 +20,7 @@ require_relative 'message_media_lookups/http/auth/basic_auth.rb'
 
 # Models
 require_relative 'message_media_lookups/models/base_model.rb'
-require_relative 'message_media_lookups/models' \
-                 '/lookup_a_phone_number_response.rb'
+require_relative 'message_media_lookups/models/lookup_a_phone_number_response.rb'
 
 # Exceptions
 require_relative 'message_media_lookups/exceptions/api_exception.rb'
