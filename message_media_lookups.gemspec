@@ -15,4 +15,5 @@ Gem::Specification.new do |s|
   s.required_ruby_version = '~> 2.0'
   s.files = Dir['{bin,lib,man,test,spec}/**/*', 'README*', 'LICENSE*']
   s.require_paths = ['lib']
+  s.metadata    = { "source_code_uri" => "https://github.com/messagemedia/lookups-ruby-sdk" }
 end
