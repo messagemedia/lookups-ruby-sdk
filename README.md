@@ -21,7 +21,7 @@ use_hmac = false # Change this to true if you are using HMAC keys
 
 client = MessageMediaLookups::MessageMediaLookupsClient.new(
   auth_user_name: auth_user_name,
-  auth_password: auth_password
+  auth_password: auth_password,
   use_hmac: use_hmac
 )
 
