@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name = 'message_media_lookups'
+  s.name = 'messagemedia_lookups_sdk'
   s.version = '1.0.0'
   s.summary = 'MessageMedia Lookups SDK'
   s.description = 'The MessageMedia Lookups API provides a number of endpoints for validating the phone numbers you’re sending to by checking their validity, type and carrier records.'
