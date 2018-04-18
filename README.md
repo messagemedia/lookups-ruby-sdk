@@ -32,6 +32,7 @@ phone_number = 'YOUR_MOBILE_NUMBER'
 options = 'carrier,type'
 
 result = lookups_controller.get_lookup_a_phone_number(phone_number, options)
+print result.inspect
 ```
 
 ## 📕 Documentation
