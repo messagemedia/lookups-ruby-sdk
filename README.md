@@ -5,7 +5,8 @@
 The MessageMedia Lookups API provides a number of endpoints for validating the phone numbers you’re sending to by checking their validity, type and carrier records.
 
 ## ⭐️ Installing via RubyGems
-* Run the following command to install the SDK via RubyGems: ```gem install messagemedia_lookups```
+* Run the following command to install the SDK via RubyGems: 
+```gem install messagemedia_lookups```
 
 ## 🎬 Get Started
 It's easy to get started. Simply enter the API Key and secret you obtained from the [MessageMedia Developers Portal](https://developers.messagemedia.com) into the code snippet below and a mobile number you wish to send to.
